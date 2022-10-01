@@ -7,8 +7,14 @@ public class SimpleAtm {
         Scanner input = new Scanner(System.in);
         SaldoView view = new SaldoView();
         CustomerController controller = new CustomerController(view);
+        SingleObj obj = SingleObj.getInstance();
         
-        int chooseMenu = 0;        
+        System.out.print("Masukan norek: ");
+        int accNo = input.nextInt();
+
+        
+        
+        int chooseMenu;        
         do{
             System.out.println("=======SIMPLE ATM=========");
             System.out.println("(1) Cek Saldo");
@@ -20,20 +26,11 @@ public class SimpleAtm {
             chooseMenu = input.nextInt();
 
             switch (chooseMenu) {
-                case 1:                       
-                    controller.saldoView("2", "123");
-                    break;
-                case 2:
-                    controller.withdrawCash("2","123",50000);
-                    break;
-                case 3 :
-                    controller.depositCash("2","123",50000);
-                    break;
-                case 0 :
-                    System.out.println("Tarimakasih");
-                    break;
-                default:
-                    System.out.println("Menu anda tidak tersedia");
+                case 1 -> controller.saldoView(accNo);
+                case 2 -> controller.withdrawCash(accNo,50000);
+                case 3 -> controller.depositCash(accNo,50000);
+                case 0 -> System.out.println("Tarimakasih");
+                default -> System.out.println("Menu anda tidak tersedia");
             }      
            
             }while(chooseMenu !=0);   

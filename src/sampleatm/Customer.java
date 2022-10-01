@@ -1,26 +1,26 @@
 package sampleatm;
 
 public class Customer {
-    private String acctNo;
-    private String PIN;
+    private int acctNo;
+    private  int PIN;
     private double balance;
 
-    public Customer(String acctNo, String PIN, double balance) {
+    public Customer(int acctNo, int PIN, double balance) {
         this.acctNo = acctNo;
         this.PIN = PIN;
         this.balance = balance;
     }
 
-    public String getAcctNo() {
+    public int getAcctNo() {
         return acctNo;
     }
-    public void setAcctNo(String acctNo) {
+    public void setAcctNo(int acctNo) {
         this.acctNo = acctNo;
     }
-    public String getPIN() {
+    public int getPIN() {
         return PIN;
     }
-    public void setPIN(String PIN) {
+    public void setPIN(int PIN) {
         this.PIN = PIN;
     }
     public double getBalance() {

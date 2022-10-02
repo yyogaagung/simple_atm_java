@@ -29,7 +29,7 @@ public class CustomerController {
         if(singleObj.getStatus()){
             if(amount % 50000 != 0){
                 System.out.println("ATM hanya melayani Tarik Tunai Kelipatan 50.000");
-            }else if (cs.getBalance() >= amount && cs.getBalance() > 100000 && amount % 50000 == 0){
+            }else if (cs.getBalance() > amount && cs.getBalance() > 100000 && amount % 50000 == 0){
                 cs.setBalance(cs.getBalance()- amount); 
                 System.out.println("Tarik Tunai berhasil.");
             }else {

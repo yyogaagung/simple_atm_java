@@ -47,7 +47,7 @@ public class CustomerController {
         if(singleObj.getStatus()){
             if (amount > 0 && amount % 50000 == 0){ 
                 cs.setBalance(cs.getBalance()+ amount); 
-                System.out.println("Setor Tunai Berhasil. Saldo Kamu: ");
+                System.out.println("Setor Tunai Berhasil.");
             }else{
                 System.out.println("Setor Tunai Gagal, ATM hanya melayani Setor Tunai Kelipatan 50.000"); 
             }

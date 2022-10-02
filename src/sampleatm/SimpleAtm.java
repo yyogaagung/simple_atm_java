@@ -17,7 +17,6 @@ public class SimpleAtm {
         accNo = input.nextInt();
         SingleObj singleObj = SingleObj.getInstance();
         singleObj.setStatus();
-        System.out.println(singleObj.getStatus());;
         
             do{
                 System.out.println("=======SIMPLE ATM=========");
@@ -44,8 +43,14 @@ public class SimpleAtm {
                         }
                         break;
                     case 2 : controller.saldoView(accNo); break;
-                    case 3 : controller.withdrawCash(accNo,50000);break;
-                    case 4 : controller.depositCash(accNo,50000); break;
+                    case 3 : 
+                        System.out.print("Nominal Tarik Tunai: ");
+                        double chooseTarikTunai = input.nextDouble();
+                        controller.withdrawCash(accNo,chooseTarikTunai);break;
+                    case 4 : 
+                        System.out.print("Nominal Setor Tunai: ");
+                        double chooseSetorTunai = input.nextDouble();
+                        controller.depositCash(accNo, chooseSetorTunai); break;
                     case 5 : singleObj.setStatus(); break;
                     case 0 : System.out.println("Terimakasi telah menggunakan layanan kami");
                     default : System.out.println("Menu tidak tersedia");break;

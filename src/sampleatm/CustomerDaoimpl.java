@@ -5,6 +5,7 @@ import java.util.List;
 
 public class CustomerDaoimpl implements CustomerDao{
     List<Customer> customers;
+    Customer cs;
     
     public CustomerDaoimpl() {
         customers = new ArrayList<Customer>();
@@ -22,6 +23,8 @@ public class CustomerDaoimpl implements CustomerDao{
     public Customer getCustomer(int accNo) {
         return customers.get(accNo);
     }
+
+
 
  
 

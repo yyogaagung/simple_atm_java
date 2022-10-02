@@ -1,20 +1,23 @@
 package sampleatm;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class SingleObj {
-        private static SingleObj instance = new SingleObj();
-        CustomerDao model = new CustomerDaoimpl();
-        
-        private SingleObj(){}
-            
-        public static SingleObj getInstance(){
-            return instance;
+public class SingleObj { 
+   private static SingleObj session;
+   private boolean status = false;
+   
+   private SingleObj(){}
+   
+   public static SingleObj getInstance() {
+        if (session == null) {
+            session = new SingleObj();
         }
-        
-    public Customer customer(int accNo){ 
-        Customer cs = model.getCustomer(accNo);
-        return cs;
+        return session;
     }
+   
+   public void setStatus(){
+       status = !status;
+   }
+   
+   public boolean getStatus(){
+       return status;
+   }
 }

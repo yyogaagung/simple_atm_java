@@ -52,7 +52,7 @@ public class SimpleAtm {
                         double chooseSetorTunai = input.nextDouble();
                         controller.depositCash(accNo, chooseSetorTunai); break;
                     case 5 : singleObj.setStatus(); break;
-                    case 0 : System.out.println("Terimakasi telah menggunakan layanan kami");
+                    case 0 : System.out.println("Terimakasi telah menggunakan layanan kami");break;
                     default : System.out.println("Menu tidak tersedia");break;
             }      
            
